@@ -1,0 +1,115 @@
+/* universal reset */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --primary-color: #27ae60;
+    --secondary-color: #2ecc71;
+    --light-green : #7ed56f;
+    --light-green-rgb : 126, 213, 111;
+    --medium-green: #55c57a;
+    --medium-green-rgb:85, 197, 122;
+    --dark-green: #28b485;
+    --dark-green-rgb: 40, 180, 133;
+    --dark-color: #34495e;
+    --light-color: #ecf0f1;
+    --border-radius: 5px;
+    --transition: all 0.3s ease;
+}
+
+/* Font setting and font styling */
+body{
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.7;
+    color: #777;
+    padding: 1.6vw;
+}
+
+
+.header{
+    height: 95vh;
+    background-image: linear-gradient( to right , rgba(var(--light-green-rgb),.7) , rgba(var(--dark-green-rgb), .7)) ,url('../images/hero.jpg');
+    background-size: cover;
+    background-position: top;
+    position: relative;
+    
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+}
+
+.logo-box{
+    position: absolute;
+    top: 40px;
+    left: 40px;
+}
+
+.logo{
+    height: 30px;
+}
+
+.text-box{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    width: 100%;
+    text-align: center;
+}
+
+.heading-primary{
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.heading-primary-main {
+    font-size: clamp(2rem, 8vw, 5rem); 
+    font-weight: 400;
+    letter-spacing: clamp(5px, 2vw, 18px);
+
+    animation-name: moveInLeft;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+}
+
+.heading-primary-sub {
+    font-size: clamp(1rem, 3vw, 1.5rem);
+    font-weight: 400;
+    letter-spacing: clamp(3px, 1.5vw, 14px);
+    animation-name: moveInRight;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+}
+
+
+@keyframes moveInLeft {
+    0%{
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    80%{
+        transform: translateX(20px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+@keyframes moveInRight {
+    0%{
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    80%{
+        transform: translateX(-20px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
