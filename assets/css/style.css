@@ -1,8 +1,10 @@
 /* universal reset */
-*{
+*,
+*::before,
+*::after{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: inherit;
 }
 
 :root{
@@ -21,7 +23,7 @@
 }
 
 html{
-    font-size: 10px;
+    font-size: 62.5%;
 }
 /* Font setting and font styling */
 body{
@@ -31,6 +33,7 @@ body{
     line-height: 1.7;
     color: #777;
     padding: 1.6vw;
+    box-sizing: border-box;
 }
 
 
