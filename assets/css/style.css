@@ -20,11 +20,14 @@
     --transition: all 0.3s ease;
 }
 
+html{
+    font-size: 10px;
+}
 /* Font setting and font styling */
 body{
     font-family: 'Lato', sans-serif;
     font-weight: 400;
-    font-size: 16px;
+    /* font-size: 16px; */
     line-height: 1.7;
     color: #777;
     padding: 1.6vw;
@@ -43,12 +46,12 @@ body{
 
 .logo-box{
     position: absolute;
-    top: 40px;
-    left: 40px;
+    top: 4rem;
+    left: 4rem;
 }
 
 .logo{
-    height: clamp(1.2rem, 1.8vw, 2rem);
+    height: clamp(1.92rem, 1.8vw, 3.2rem);
 }
 
 .text-box{
@@ -65,13 +68,13 @@ body{
     flex-direction: column;
     color: #fff;
     text-transform: uppercase;
-    margin-bottom: 2rem;
+    margin-bottom: 3.2rem;
 }
 
 .heading-primary-main {
-    font-size: clamp(2rem, 5vw, 8rem); 
+    font-size: clamp(3.2rem, 5vw, 12.8rem); 
     font-weight: 400;
-    letter-spacing: clamp(6px, 1.25vw, 1.25rem);
+    letter-spacing: clamp(.6rem, 1.25vw, 2rem);
 
     animation-name: moveInLeft;
     animation-duration: 1s;
@@ -79,9 +82,9 @@ body{
 }
 
 .heading-primary-sub {
-    font-size: clamp(.5rem, 1.5vw, 1.5rem);
+    font-size: clamp(.8rem, 1.5vw, 2.4rem);
     font-weight: 400;
-    letter-spacing: clamp(.4rem, 1vw, 1rem);
+    letter-spacing: clamp(.5rem, 1vw, 1.6rem);
     animation-name: moveInRight;
     animation-duration: 1s;
     animation-timing-function: ease-in-out;
@@ -90,23 +93,24 @@ body{
 @keyframes moveInLeft {
     0%{
         opacity: 0;
-        transform: translateX(-100px);
+        transform: translateX(-10rem);
     }
     80%{
-        transform: translateX(20px);
+        transform: translateX(2rem);
     }
     100%{
         opacity: 1;
         transform: translateX(0);
     }
 }
+
 @keyframes moveInRight {
     0%{
         opacity: 0;
-        transform: translateX(100px);
+        transform: translateX(10rem);
     }
     80%{
-        transform: translateX(-20px);
+        transform: translateX(-2rem);
     }
     100%{
         opacity: 1;
@@ -119,10 +123,10 @@ body{
 .btn:visited{
     text-transform: uppercase;
     text-decoration: none;
-    padding: 1.2rem clamp(1.5rem, 2.5vw + 0.5rem, 4rem);  
+    padding: 1.92rem clamp(2.4rem, 2.5vw + 0.8rem, 6.4rem);  
     display: inline-block;
-    border-radius: 100px;
-    font-size: clamp(.8rem , .8401vw, 1.5rem);
+    border-radius: 10rem;
+    font-size: clamp(1.28rem , .8401vw, 2.4rem);
     font-weight: 600;
     border: none;
     cursor: pointer;
@@ -131,13 +135,13 @@ body{
 }
 
 .btn:hover{
-    transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(48, 48, 48, 0.2);
+    transform: translateY(-0.3rem);
+    box-shadow: 0 1rem 2rem rgba(48, 48, 48, 0.2);
 }
 
 .btn:active{
-    transform: translateY(-1px);
-    box-shadow: 0 5px 10px rgba(63, 63, 63, 0.2);
+    transform: translateY(-0.1rem);
+    box-shadow: 0 .5rem 1rem rgba(63, 63, 63, 0.2);
 }
 
 .btn-white{
@@ -149,11 +153,12 @@ body{
     animation: moveInTop .5s ease-in-out .5s;
     animation-fill-mode: backwards;
 }
+
 .btn::after{
     display: inline-block;
     height: 100%;
     width: 100%;
-    border-radius: 100px;
+    border-radius: 10rem;
     position: absolute;
     top: 0;
     left: 0;
