@@ -47,17 +47,17 @@ body{
     clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
 }
 
-.logo-box{
+.headar__logo-box{
     position: absolute;
     top: 4rem;
     left: 4rem;
 }
 
-.logo{
+.headar__logo{
     height: clamp(1.92rem, 1.8vw, 3.2rem);
 }
 
-.text-box{
+.headar__text-box{
     position: absolute;
     top: 50%;
     left: 50%;
@@ -74,7 +74,7 @@ body{
     margin-bottom: 3.2rem;
 }
 
-.heading-primary-main {
+.heading-primary--main {
     font-size: clamp(3.2rem, 5vw, 12.8rem); 
     font-weight: 400;
     letter-spacing: clamp(.6rem, 1.25vw, 2rem);
@@ -84,7 +84,7 @@ body{
     animation-timing-function: ease-in-out;
 }
 
-.heading-primary-sub {
+.heading-primary--sub {
     font-size: clamp(.8rem, 1.5vw, 2.4rem);
     font-weight: 400;
     letter-spacing: clamp(.5rem, 1vw, 1.6rem);
@@ -147,12 +147,12 @@ body{
     box-shadow: 0 .5rem 1rem rgba(63, 63, 63, 0.2);
 }
 
-.btn-white{
+.btn--white{
     background-color: var(--light-color);
     color: #777;
 }
 
-.btn-animated{
+.btn--animated{
     animation: moveInTop .5s ease-in-out .5s;
     animation-fill-mode: backwards;
 }
@@ -170,11 +170,11 @@ body{
     content: "";
 }
 
-.btn-white::after{
+.btn--white::after{
     background-color: var(--light-color);
     box-shadow: 0 1rem 2rem rgba(126, 213, 111, 0.4);
 }
-.btn-white:hover::after{
+.btn--white:hover::after{
     transform: scale(1.4);
     opacity: 0;
 }
